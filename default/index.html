@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Top</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/search-modal.css">
+  <link rel="stylesheet" href="assets/css/page-counter.css">
+  <link rel="stylesheet" href="assets/css/page-list-modal.css">
+  <link rel="stylesheet" href="assets/css/search-bar.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="top-nav__search">
+      <label class="visually-hidden" for="searchInput">検索</label>
+      <input id="searchInput" placeholder="キーワードを入力">
+      <button id="searchBtn" type="button">検索</button>
+    </div>
+  </nav>
+  <div class="site-container">
+    <header class="site-header">
+      <a href="{{base_path}}" class="site-title">{{site_name}}</a>
+    </header>
+    <main class="content">
+      <article class="article">
+        <header class="article-header">
+          <h1 class="article-title">{{title}}</h1>
+        </header>
+        <div class="article-body">
+          {{content}}
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; {{year}} {{site_name}}</p>
+      <p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p>  
+    </footer>
+  </div>
+
+<!-- page counter -->
+<div id="page-counter" class="page-counter">
+  <span id="page-current"></span>
+  <span class="sep"> / </span>
+  <span id="page-total"></span>
+</div>
+
+<script>window.YACHO_BASE = "{{base_path}}"; window.YACHO_PROVIDER_MODE = "json";</script>
+<script type="module" src="{{base_path}}assets/js/core/index.js"></script>
+</body>
+</html>
