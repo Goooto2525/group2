@@ -1,0 +1,134 @@
+{
+    "positions": {
+        "group-1779496200489": {
+            "x": 105,
+            "y": 285
+        },
+        "group-1779496171085": {
+            "x": 105,
+            "y": -60
+        },
+        "node-index": {
+            "x": 150,
+            "y": -165
+        },
+        "node-purchase-record": {
+            "x": 40,
+            "y": 40
+        },
+        "node-family-line-log": {
+            "x": 40,
+            "y": 125
+        },
+        "node-mother-statement": {
+            "x": 40,
+            "y": 210
+        },
+        "node-father-statement": {
+            "x": 40,
+            "y": 295
+        },
+        "node-fridge-log": {
+            "x": 40,
+            "y": 210
+        },
+        "node-brother-statement": {
+            "x": 40,
+            "y": 40
+        },
+        "node-my-statement": {
+            "x": 40,
+            "y": 125
+        },
+        "node-report-final": {
+            "x": 165,
+            "y": 750
+        }
+    },
+    "groups": [
+        {
+            "id": "group-1779496200489",
+            "title": "検索しないと出ないもの",
+            "nodeIds": [
+                "node-mother-statement",
+                "node-father-statement",
+                "node-brother-statement",
+                "node-my-statement"
+            ],
+            "position": {
+                "x": 105,
+                "y": 285
+            },
+            "style": {
+                "width": 280,
+                "height": 390
+            },
+            "data": {
+                "title": "検索しないと出ないもの",
+                "label": "検索しないと出ないもの",
+                "memo": "",
+                "nodeType": "group",
+                "slug": "",
+                "color": "#374151",
+                "pageType": "page",
+                "k1": "",
+                "k2": ""
+            }
+        },
+        {
+            "id": "group-1779496171085",
+            "title": "サイトから見れるところ",
+            "nodeIds": [
+                "node-purchase-record",
+                "node-family-line-log",
+                "node-fridge-log"
+            ],
+            "position": {
+                "x": 105,
+                "y": -60
+            },
+            "style": {
+                "width": 280,
+                "height": 305
+            },
+            "data": {
+                "title": "サイトから見れるところ",
+                "label": "サイトから見れるところ",
+                "memo": "",
+                "nodeType": "group",
+                "slug": "",
+                "color": "#374151",
+                "pageType": "page",
+                "k1": "",
+                "k2": ""
+            }
+        }
+    ],
+    "flowEdges": [
+        {
+            "id": "xy-edge__node-indexbottom-group-1779496171085top",
+            "source": "node-index",
+            "target": "group-1779496171085",
+            "type": "default",
+            "sourceHandle": "bottom",
+            "targetHandle": "top"
+        },
+        {
+            "id": "xy-edge__group-1779496171085bottom-group-1779496200489top",
+            "source": "group-1779496171085",
+            "target": "group-1779496200489",
+            "type": "default",
+            "sourceHandle": "bottom",
+            "targetHandle": "top"
+        },
+        {
+            "id": "xy-edge__group-1779496200489bottom-node-report-finaltop",
+            "source": "group-1779496200489",
+            "target": "node-report-final",
+            "type": "default",
+            "sourceHandle": "bottom",
+            "targetHandle": "top"
+        }
+    ],
+    "viewport": {}
+}
