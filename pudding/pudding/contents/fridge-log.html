@@ -2,35 +2,125 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>消えた限定プリン事件 保管状況確認記録</title>
+  <title>消えた限定プリン事件 冷蔵庫内状況記録</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/search-modal.css">
   <link rel="stylesheet" href="../assets/css/page-counter.css">
   <link rel="stylesheet" href="../assets/css/search-bar.css">
+  <link rel="stylesheet" href="../assets/css/fridge-log.css">
 </head>
 <body>
-  <nav class="top-nav"><div class="top-nav__search"><label class="visually-hidden" for="searchInput">検索</label><input id="searchInput" placeholder="キーワードを入力"><button id="searchBtn" type="button">検索</button></div></nav>
-  <div class="site-container"><main class="content"><article class="article"><header class="article-header"><h1 class="article-title">消えた限定プリン事件 保管状況確認記録</h1></header><div class="article-body">
-<section><p>本記録は、対象物件の保管環境および消失確認時点の冷蔵庫内状況を整理したものである。記録主体は私、補足確認は母が実施した。</p></section>
-<section><h2>収納時確認</h2><table><tbody>
-<tr><th scope="row">収納時刻</th><td>21:24</td></tr>
-<tr><th scope="row">収納位置</th><td>冷蔵庫第二段右奥</td></tr>
-<tr><th scope="row">周辺物</th><td>麦茶ポット、豆腐、作り置きの煮物容器</td></tr>
-<tr><th scope="row">22:00確認</th><td>同位置に対象プリンの存在を確認</td></tr>
-</tbody></table></section>
-<section><h2>07:20確認時の状態</h2><table><thead><tr><th>確認項目</th><th>状態</th></tr></thead><tbody>
-<tr><td>対象プリン本体</td><td>所在不明</td></tr>
-<tr><td>棚配置</td><td>周辺物に大きな崩れなし</td></tr>
-<tr><td>代替デザート</td><td>ヨーグルト2個、ゼリー1個は残存</td></tr>
-<tr><td>異常痕跡</td><td>プリン容器そのものは冷蔵庫内から発見されず</td></tr>
-</tbody></table></section>
-<section><h2>所見</h2><p>収納位置は家族全員が容易に認識可能な場所であり、偶発的な見落としの可能性は低い。一方、周辺物の乱れが軽微であることから、対象物件のみを選択的に持ち出した行為が推認される。</p><p>なお、兄が深夜帯に帰宅して冷蔵庫を開けた可能性は排除できず、初期段階では対象物件への接触者候補として一時的に検討対象となった。</p><p>なお、深夜の行動記録と食器の所在に関する照合結果は、通常の経過資料とは別に最終報告として統合整理する予定である。</p></section>
-<section><p><a href="../index.html">Topページへ戻る</a></p></section>
-  </div></article></main><footer class="site-footer"><p>&copy; 2026 消えた限定プリン事件</p><p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p></footer></div>
-<div id="page-counter" class="page-counter"><span id="page-current"></span><span class="sep"> / </span><span id="page-total"></span></div>
-<script>window.YACHO_BASE = "../"; window.YACHO_PROVIDER_MODE = "json";</script>
-<script type="module" src="../assets/js/core/index.js"></script>
-<script type="module" src="../assets/js/page-progress.js"></script>
+  <nav class="top-nav">
+    <div class="top-nav__search">
+      <label class="visually-hidden" for="searchInput">検索</label>
+      <input id="searchInput" placeholder="キーワードを入力">
+      <button id="searchBtn" type="button">検索</button>
+    </div>
+  </nav>
+
+  <div class="site-container">
+    <main class="content">
+      <article class="article fridge-record">
+        <header class="article-header fridge-record__header">
+          <p class="fridge-record__eyebrow">EVIDENCE / FR-03</p>
+          <h1 class="article-title">冷蔵庫内状況記録</h1>
+          <p class="fridge-record__lead">冷蔵庫の奥に残されていた、3組の未完成なポーカーハンド。欠けたカードが、次の捜索場所を示している。</p>
+        </header>
+
+        <div class="article-body">
+          <section class="puzzle-brief" aria-labelledby="brief-heading">
+            <div>
+              <p class="section-label">MISSION</p>
+              <h2 id="brief-heading">3枚の伏せ札を特定せよ</h2>
+            </div>
+            <p>各ハンドの「？」には、指定された役を完成させるカードが1枚入る。カードの<strong>数字</strong>と<strong>スート</strong>を記録し、上から順に解読せよ。</p>
+          </section>
+
+          <section class="poker-board" aria-labelledby="board-heading">
+            <h2 id="board-heading" class="visually-hidden">未完成のポーカーハンド</h2>
+
+            <article class="poker-hand">
+              <header class="poker-hand__header">
+                <span class="poker-hand__number">01</span>
+                <div><p class="poker-hand__caption">完成させる役</p><h3>ストレートフラッシュ</h3></div>
+              </header>
+              <div class="playing-cards" role="img" aria-label="ハートのA、2、伏せ札、4、5">
+                <span class="playing-card is-red"><b>A</b><i>♥</i></span>
+                <span class="playing-card is-red"><b>2</b><i>♥</i></span>
+                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
+                <span class="playing-card is-red"><b>4</b><i>♥</i></span>
+                <span class="playing-card is-red"><b>5</b><i>♥</i></span>
+              </div>
+            </article>
+
+            <article class="poker-hand">
+              <header class="poker-hand__header">
+                <span class="poker-hand__number">02</span>
+                <div><p class="poker-hand__caption">完成させる役</p><h3>ロイヤルフラッシュ</h3></div>
+              </header>
+              <div class="playing-cards" role="img" aria-label="スペードの伏せ札、10、J、Q、K">
+                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
+                <span class="playing-card"><b>10</b><i>♠</i></span>
+                <span class="playing-card"><b>J</b><i>♠</i></span>
+                <span class="playing-card"><b>Q</b><i>♠</i></span>
+                <span class="playing-card"><b>K</b><i>♠</i></span>
+              </div>
+            </article>
+
+            <article class="poker-hand">
+              <header class="poker-hand__header">
+                <span class="poker-hand__number">03</span>
+                <div><p class="poker-hand__caption">完成させる役</p><h3>フォーカード</h3></div>
+              </header>
+              <div class="playing-cards" role="img" aria-label="クラブの5、スペードの5、ハートの5、伏せ札、ダイヤの9">
+                <span class="playing-card"><b>5</b><i>♣</i></span>
+                <span class="playing-card"><b>5</b><i>♠</i></span>
+                <span class="playing-card is-red"><b>5</b><i>♥</i></span>
+                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
+                <span class="playing-card is-red"><b>9</b><i>♦</i></span>
+              </div>
+            </article>
+          </section>
+
+          <section class="decode-panel" aria-labelledby="decode-heading">
+            <div class="decode-panel__heading">
+              <p class="section-label">DECODING RULE</p>
+              <h2 id="decode-heading">不足カードを文字に変換する</h2>
+            </div>
+            <div class="decode-steps">
+              <div class="decode-step"><span>1</span><p><strong>数字 → 五十音の行</strong><br>A＝1＝あ行、2＝か行、3＝さ行、4＝た行、5＝な行……</p></div>
+              <div class="decode-step"><span>2</span><p><strong>スート → 母音</strong><br>スート名の最初の音から母音を取る。例：ハートの「ハ」→「あ」</p></div>
+              <div class="decode-step"><span>3</span><p><strong>行 ＋ 母音</strong><br>2つを組み合わせ、01から順に読む。</p></div>
+            </div>
+            <button id="hintButton" class="hint-button" type="button" aria-expanded="false" aria-controls="puzzleHint">ヒントを表示</button>
+            <p id="puzzleHint" class="puzzle-hint" hidden>01の「？」は、ハートでA・2・3・4・5をそろえるためのカード。</p>
+          </section>
+
+          <section class="answer-panel" aria-labelledby="answer-heading">
+            <p class="section-label">DESTINATION</p>
+            <h2 id="answer-heading">メモが示す場所は？</h2>
+            <form id="fridgePuzzle" class="puzzle-answer" novalidate>
+              <label for="fridgeAnswer">導き出した3文字を入力</label>
+              <div class="puzzle-answer__controls">
+                <input id="fridgeAnswer" name="answer" type="text" inputmode="text" autocomplete="off" maxlength="10" required>
+                <button type="submit">照合する</button>
+              </div>
+              <p id="fridgeFeedback" class="puzzle-answer__feedback" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="back-link"><p><a href="../index.html">Topページへ戻る</a></p></section>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer"><p>&copy; 2026 消えた限定プリン事件</p><p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p></footer>
+  </div>
+
+  <div id="page-counter" class="page-counter"><span id="page-current"></span><span class="sep"> / </span><span id="page-total"></span></div>
+  <script>window.YACHO_BASE = "../"; window.YACHO_PROVIDER_MODE = "json";</script>
+  <script type="module" src="../assets/js/core/index.js"></script>
+  <script type="module" src="../assets/js/page-progress.js"></script>
+  <script src="../assets/js/fridge-log.js"></script>
 </body>
 </html>
