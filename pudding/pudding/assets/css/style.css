@@ -370,7 +370,7 @@ body .top-nav__search button:focus-visible {
 
 .article-body th {
   width: 32%;
-  color: #f0f4f8;
+  color: #f0f4f8; 
   font-weight: 700;
   background: rgba(255, 255, 255, 0.04);
 }

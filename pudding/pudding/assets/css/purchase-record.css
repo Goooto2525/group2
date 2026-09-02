@@ -1,0 +1,91 @@
+.blank-keyboard {
+  width: min(100%, 720px);
+  margin: 1.5rem auto 2rem;
+  padding: clamp(.65rem, 2vw, 1.2rem);
+  overflow-x: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #11161c;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04), 0 12px 28px rgba(0, 0, 0, .3);
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: clamp(3px, .8vw, 8px);
+  min-width: 560px;
+}
+
+.keyboard-row + .keyboard-row {
+  margin-top: clamp(3px, .8vw, 8px);
+}
+
+.blank-key {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 clamp(46px, 7.5vw, 60px);
+  width: clamp(46px, 7.5vw, 60px);
+  height: clamp(46px, 7.5vw, 60px);
+  border: 1px solid #56616d;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #303945, #1b222a);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .13), 0 3px 0 #0b0f13, 0 5px 9px rgba(0, 0, 0, .35);
+}
+
+.pool-ball {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid rgba(255, 255, 255, .75);
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 1px 2px #000;
+  box-shadow: inset -4px -5px 8px rgba(0, 0, 0, .28), 0 3px 6px rgba(0, 0, 0, .5);
+}
+
+.ball--yellow { color: #171717; background: #f1c928; text-shadow: none; }
+.ball--blue { background: #176ac1; }
+.ball--red { background: #cf3232; }
+.ball--purple { background: #71399d; }
+.ball--orange { background: #e97820; }
+
+.blank-key--collision .pool-ball {
+  position: absolute;
+}
+
+.blank-key--collision .ball--purple {
+  left: 7px;
+  top: 7px;
+  z-index: 1;
+}
+
+.blank-key--collision .ball--orange {
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+}
+
+.puzzle-answer { max-width: 520px; }
+.puzzle-answer label { display: block; margin-bottom: .4rem; font-weight: 700; }
+.puzzle-answer__controls { display: flex; gap: .65rem; }
+.puzzle-answer input { min-width: 0; flex: 1; padding: .7rem .8rem; color: var(--text); background: #0f1419; border: 1px solid var(--line-strong); font: inherit; }
+.puzzle-answer button { padding: .7rem 1rem; color: var(--text); background: #29323d; border: 1px solid var(--line-strong); font: inherit; font-weight: 700; cursor: pointer; }
+.puzzle-answer__feedback { min-height: 1.8em; margin-top: .7rem !important; }
+.puzzle-answer__feedback.is-correct { color: #8ce0ad; }
+.puzzle-answer__feedback.is-wrong { color: #f0a3a3; }
+
+@media (max-width: 520px) {
+  .blank-keyboard { padding: .65rem; }
+  .keyboard-row { min-width: 485px; }
+  .blank-key { flex-basis: 42px; width: 42px; height: 42px; }
+  .pool-ball { width: 29px; height: 29px; font-size: .82rem; }
+  .blank-key--collision .ball--purple { left: 4px; top: 4px; }
+  .blank-key--collision .ball--orange { right: 3px; bottom: 3px; }
+  .puzzle-answer__controls { align-items: stretch; flex-direction: column; }
+}
