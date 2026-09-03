@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     feedback.className = `puzzle-answer__feedback ${correct ? 'is-correct' : 'is-wrong'}`;
     feedback.textContent = correct
-      ? '正解。空白のマスをQWERTY配列の26文字のループと見立て、球の数字の分だけ右（次）のマスに進むと「POKER」が導き出される。'
-      : '違うようだ。球の置かれたマスから、球の数字の分だけ進んでみよう。マスが途切れたら先頭に戻るループ構造になっているようだ。';
+      ? '正解。空白のマスをQWERTY配列に見立て、球の番号を文字の順番として読むと「POKER」が導き出される。'
+      : '違うようだ。空白のマスをQWERTY配列に見立て、1番から順に球が置かれたマスの文字を読んでみよう。';
   });
 });
