@@ -55,22 +55,6 @@
 .ball--purple { background: #71399d; }
 .ball--orange { background: #e97820; }
 
-.blank-key--collision .pool-ball {
-  position: absolute;
-}
-
-.blank-key--collision .ball--purple {
-  left: 7px;
-  top: 7px;
-  z-index: 1;
-}
-
-.blank-key--collision .ball--orange {
-  right: 5px;
-  bottom: 5px;
-  z-index: 2;
-}
-
 .puzzle-answer { max-width: 520px; }
 .puzzle-answer label { display: block; margin-bottom: .4rem; font-weight: 700; }
 .puzzle-answer__controls { display: flex; gap: .65rem; }
@@ -85,7 +69,5 @@
   .keyboard-row { min-width: 485px; }
   .blank-key { flex-basis: 42px; width: 42px; height: 42px; }
   .pool-ball { width: 29px; height: 29px; font-size: .82rem; }
-  .blank-key--collision .ball--purple { left: 4px; top: 4px; }
-  .blank-key--collision .ball--orange { right: 3px; bottom: 3px; }
   .puzzle-answer__controls { align-items: stretch; flex-direction: column; }
 }
