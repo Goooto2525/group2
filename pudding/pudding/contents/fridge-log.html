@@ -25,86 +25,91 @@
         <header class="article-header fridge-record__header">
           <p class="fridge-record__eyebrow">EVIDENCE / FR-03</p>
           <h1 class="article-title">冷蔵庫内状況記録</h1>
-          <p class="fridge-record__lead">冷蔵庫の奥に残されていた、3組の未完成なポーカーハンド。欠けたカードが、次の捜索場所を示している。</p>
+          <p class="fridge-record__lead">冷蔵庫に残された4組のカード。どの並びにも意味がある。カードとポーカーの役名を結び付け、最後の列が示す言葉を解読せよ。</p>
         </header>
 
         <div class="article-body">
-          <section class="puzzle-brief" aria-labelledby="brief-heading">
-            <div>
-              <p class="section-label">MISSION</p>
-              <h2 id="brief-heading">3枚の伏せ札を特定せよ</h2>
-            </div>
-            <p>各ハンドの「？」には、指定された役を完成させるカードが1枚入る。カードの<strong>数字</strong>と<strong>スート</strong>を記録し、上から順に解読せよ。</p>
+          <section class="puzzle-intro" aria-labelledby="puzzle-heading">
+            <p class="section-label">CARD CIPHER</p>
+            <h2 id="puzzle-heading">4つのカード列を読み解く</h2>
+            <p>手がかりのカード列A、B,Cはある意味を表している。これらの手がかりを参考にして、カード列Dの表す言葉を答えよ。</p>
           </section>
 
-          <section class="poker-board" aria-labelledby="board-heading">
-            <h2 id="board-heading" class="visually-hidden">未完成のポーカーハンド</h2>
-
-            <article class="poker-hand">
-              <header class="poker-hand__header">
-                <span class="poker-hand__number">01</span>
-                <div><p class="poker-hand__caption">完成させる役</p><h3>ストレートフラッシュ</h3></div>
+          <section class="poker-list" aria-label="意味を持つ4つのポーカーカード列">
+            <article class="poker-row">
+              <header class="poker-row__header">
+                <span class="poker-row__index">01</span>
+                <div><span class="poker-row__kind">手がかり</span><h3>カード列 A</h3></div>
               </header>
-              <div class="playing-cards" role="img" aria-label="ハートのA、2、伏せ札、4、5">
-                <span class="playing-card is-red"><b>A</b><i>♥</i></span>
-                <span class="playing-card is-red"><b>2</b><i>♥</i></span>
-                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
-                <span class="playing-card is-red"><b>4</b><i>♥</i></span>
-                <span class="playing-card is-red"><b>5</b><i>♥</i></span>
+              <div class="poker-row__body">
+                <div class="playing-cards" aria-label="4スペード、5クラブ、6ダイヤ、7ハート、8スペード">
+                  <span class="playing-card is-black"><b>4</b><i>♠</i></span>
+                  <span class="playing-card is-black"><b>5</b><i>♣</i></span>
+                  <span class="playing-card is-red"><b>6</b><i>♦</i></span>
+                  <span class="playing-card is-red"><b>7</b><i>♥</i></span>
+                  <span class="playing-card is-black"><b>8</b><i>♠</i></span>
+                </div>
               </div>
             </article>
 
-            <article class="poker-hand">
-              <header class="poker-hand__header">
-                <span class="poker-hand__number">02</span>
-                <div><p class="poker-hand__caption">完成させる役</p><h3>ロイヤルフラッシュ</h3></div>
+            <article class="poker-row">
+              <header class="poker-row__header">
+                <span class="poker-row__index">02</span>
+                <div><span class="poker-row__kind">手がかり</span><h3>カード列 B</h3></div>
               </header>
-              <div class="playing-cards" role="img" aria-label="スペードの伏せ札、10、J、Q、K">
-                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
-                <span class="playing-card"><b>10</b><i>♠</i></span>
-                <span class="playing-card"><b>J</b><i>♠</i></span>
-                <span class="playing-card"><b>Q</b><i>♠</i></span>
-                <span class="playing-card"><b>K</b><i>♠</i></span>
+              <div class="poker-row__body">
+                <div class="playing-cards" aria-label="2ハート、3ハート、6ハート、9ハート、Jハート">
+                  <span class="playing-card is-red"><b>2</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>3</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>6</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>9</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>J</b><i>♥</i></span>
+                </div>
               </div>
             </article>
 
-            <article class="poker-hand">
-              <header class="poker-hand__header">
-                <span class="poker-hand__number">03</span>
-                <div><p class="poker-hand__caption">完成させる役</p><h3>フォーカード</h3></div>
+            <article class="poker-row">
+              <header class="poker-row__header">
+                <span class="poker-row__index">03</span>
+                <div><span class="poker-row__kind">手がかり</span><h3>カード列 C</h3></div>
               </header>
-              <div class="playing-cards" role="img" aria-label="クラブの5、スペードの5、ハートの5、伏せ札、ダイヤの9">
-                <span class="playing-card"><b>5</b><i>♣</i></span>
-                <span class="playing-card"><b>5</b><i>♠</i></span>
-                <span class="playing-card is-red"><b>5</b><i>♥</i></span>
-                <span class="playing-card is-hidden" aria-label="伏せ札"><b>?</b></span>
-                <span class="playing-card is-red"><b>9</b><i>♦</i></span>
+              <div class="poker-row__body">
+                <div class="playing-cards" aria-label="2ハート、2ダイヤ、2クラブ、4ハート、4スペード">
+                  <span class="playing-card is-red"><b>2</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>2</b><i>♦</i></span>
+                  <span class="playing-card is-black"><b>2</b><i>♣</i></span>
+                  <span class="playing-card is-red"><b>4</b><i>♥</i></span>
+                  <span class="playing-card is-black"><b>4</b><i>♠</i></span>
+                </div>
               </div>
             </article>
-          </section>
 
-          <section class="decode-panel" aria-labelledby="decode-heading">
-            <div class="decode-panel__heading">
-              <p class="section-label">DECODING RULE</p>
-              <h2 id="decode-heading">不足カードを文字に変換する</h2>
-            </div>
-            <div class="decode-steps">
-              <div class="decode-step"><span>1</span><p><strong>数字 → 五十音の行</strong><br>A＝1＝あ行、2＝か行、3＝さ行、4＝た行、5＝な行……</p></div>
-              <div class="decode-step"><span>2</span><p><strong>スート → 母音</strong><br>スート名の最初の音から母音を取る。例：ハートの「ハ」→「あ」</p></div>
-              <div class="decode-step"><span>3</span><p><strong>行 ＋ 母音</strong><br>2つを組み合わせ、01から順に読む。</p></div>
-            </div>
-            <button id="hintButton" class="hint-button" type="button" aria-expanded="false" aria-controls="puzzleHint">ヒントを表示</button>
-            <p id="puzzleHint" class="puzzle-hint" hidden>01の「？」は、ハートでA・2・3・4・5をそろえるためのカード。</p>
+            <article class="poker-row poker-row--question">
+              <header class="poker-row__header">
+                <span class="poker-row__index">04</span>
+                <div><span class="poker-row__kind">解読対象</span><h3>カード列 D</h3></div>
+              </header>
+              <div class="poker-row__body">
+                <div class="playing-cards" aria-label="2ダイヤ、7ハート、6ダイヤ、6ハート、5クラブ">
+                  <span class="playing-card is-red"><b>2</b><i>♦</i></span>
+                  <span class="playing-card is-red"><b>7</b><i>♥</i></span>
+                  <span class="playing-card is-red"><b>6</b><i>♦</i></span>
+                  <span class="playing-card is-red"><b>6</b><i>♥</i></span>
+                  <span class="playing-card is-black"><b>5</b><i>♣</i></span>
+                </div>
+                <div class="cipher-slots cipher-slots--unknown" aria-label="5文字の答え"><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span></div>
+              </div>
+            </article>
           </section>
 
           <section class="answer-panel" aria-labelledby="answer-heading">
-            <p class="section-label">DESTINATION</p>
-            <h2 id="answer-heading">メモが示す場所は？</h2>
+            <p class="section-label">YOUR ANSWER</p>
+            <h2 id="answer-heading">最後の行が示す言葉は？</h2>
             <form id="fridgePuzzle" class="puzzle-answer" novalidate>
-              <label for="fridgeAnswer">導き出した3文字を入力</label>
+              <label for="fridgeAnswer">答えを入力</label>
               <div class="puzzle-answer__controls">
-                <input id="fridgeAnswer" name="answer" type="text" inputmode="text" autocomplete="off" maxlength="10" required>
-                <button type="submit">照合する</button>
+                <input id="fridgeAnswer" name="answer" type="text" autocomplete="off" maxlength="20" aria-describedby="fridgeFeedback" required>
+                <button type="submit">解答する</button>
               </div>
               <p id="fridgeFeedback" class="puzzle-answer__feedback" aria-live="polite"></p>
             </form>
