@@ -42,7 +42,7 @@
         },
         {
             "id": "node-family-line-log",
-            "title": "消えた限定プリン事件 家族間連絡記録",
+            "title": "二つの参道の謎",
             "slug": "family-line-log",
             "path": "/contents/family-line-log.html",
             "kind": "page",
@@ -216,7 +216,7 @@
             "id": "node-family-line-log",
             "kind": "page",
             "ref": "p:node-family-line-log",
-            "title": "消えた限定プリン事件 家族間連絡記録",
+            "title": "二つの参道の謎",
             "memo": "",
             "nodeType": "page",
             "slug": "family-line-log",
