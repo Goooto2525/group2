@@ -2,8 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('purchasePuzzle');
   const input = document.getElementById('purchaseAnswer');
   const feedback = document.getElementById('purchaseFeedback');
+  const keywordScreen = document.getElementById('keywordScreen');
+  const keywordClose = document.getElementById('keywordClose');
 
-  if (!form || !input || !feedback) return;
+  if (!form || !input || !feedback || !keywordScreen || !keywordClose) return;
+
+  const closeKeywordScreen = () => {
+    keywordScreen.hidden = true;
+    input.focus();
+  };
+
+  keywordClose.addEventListener('click', closeKeywordScreen);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !keywordScreen.hidden) closeKeywordScreen();
+  });
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -15,5 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     feedback.textContent = correct
       ? '正解。空白のマスをQWERTY配列に見立て、球の番号を文字の順番として読むと「POKER」が導き出される。'
       : '違うようだ。空白のマスをQWERTY配列に見立て、1番から順に球が置かれたマスの文字を読んでみよう。';
+
+    if (correct) {
+      keywordScreen.hidden = false;
+      keywordClose.focus();
+    }
   });
 });
