@@ -4,19 +4,26 @@
 <div class="site-container"><main class="content"><article class="article"><header class="article-header"><h1 class="article-title">消えた限定プリン事件 購入記録</h1></header><div class="article-body">
 <section><p>文字のない配列に置かれた球を手がかりに、導き出されるゲームを特定せよ。</p></section>
 <section aria-labelledby="keyboard-heading"><h2 id="keyboard-heading">謎の配列</h2>
-<div class="blank-keyboard" role="img" aria-label="左詰めの26マスからなる文字のないキーボード。特定のマスに1から5の球が置かれている">
+<div class="blank-keyboard" role="img" aria-label="左詰めの26マスからなる文字のないキーボード。球の番号順に対応するキーを読む">
   <div class="keyboard-row">
-    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div>
-    <div class="blank-key"><span class="pool-ball ball--blue"></span></div><div class="blank-key"></div><div class="blank-key"><span class="pool-ball ball--yellow"></span></div><div class="blank-key"></div>
+    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"><span class="pool-ball ball--purple"></span></div><div class="blank-key"><span class="pool-ball ball--orange"></span></div><div class="blank-key"></div><div class="blank-key"></div>
+    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"><span class="pool-ball ball--blue"></span></div><div class="blank-key"><span class="pool-ball ball--yellow"></span></div>
   </div>
   <div class="keyboard-row">
-    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"><span class="pool-ball ball--red"></span></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div>
+    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"><span class="pool-ball ball--red"></span></div><div class="blank-key"></div>
   </div>
   <div class="keyboard-row">
-    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div>
-    <div class="blank-key blank-key--collision"><span class="pool-ball ball--purple"></span><span class="pool-ball ball--orange"></span></div><div class="blank-key"></div>
+    <div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div><div class="blank-key"></div>
   </div>
 </div></section>
 <section aria-labelledby="answer-heading"><h2 id="answer-heading">導き出されるゲームは？</h2><form id="purchasePuzzle" class="puzzle-answer"><label for="purchaseAnswer">答え</label><div class="puzzle-answer__controls"><input id="purchaseAnswer" name="answer" type="text" autocomplete="off" required><button type="submit">確認する</button></div><p id="purchaseFeedback" class="puzzle-answer__feedback" aria-live="polite"></p></form></section>
 <section><p><a href="../index.html">Topページへ戻る</a></p></section></div></article></main><footer class="site-footer"><p>&copy; 2026 消えた限定プリン事件</p><p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p></footer></div>
+<div id="keywordScreen" class="keyword-screen" role="dialog" aria-modal="true" aria-labelledby="keywordTitle" hidden>
+  <div class="keyword-screen__panel">
+    <p class="keyword-screen__status">正解</p>
+    <h2 id="keywordTitle">キーワード</h2>
+    <p class="keyword-screen__word">朝</p>
+    <button id="keywordClose" class="keyword-screen__close" type="button">謎の画面へ戻る</button>
+  </div>
+</div>
 <div id="page-counter" class="page-counter"><span id="page-current"></span><span class="sep"> / </span><span id="page-total"></span></div><script>window.YACHO_BASE="../";window.YACHO_PROVIDER_MODE="json";</script><script type="module" src="../assets/js/core/index.js"></script><script type="module" src="../assets/js/page-progress.js"></script><script src="../assets/js/purchase-record.js"></script></body></html>
