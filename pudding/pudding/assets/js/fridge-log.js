@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const keywordScreen = document.getElementById('keywordScreen');
   const keywordClose = document.getElementById('keywordClose');
 
-  if (!form || !input || !feedback || !keywordScreen || !keywordClose) return;
+  if (!form || !input || !feedback || !keywordScreen || !keywordClose) {
+    return;
+  }
 
   const closeKeywordScreen = () => {
     keywordScreen.hidden = true;
@@ -15,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   keywordClose.addEventListener('click', closeKeywordScreen);
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !keywordScreen.hidden) closeKeywordScreen();
+    if (event.key === 'Escape' && !keywordScreen.hidden) {
+      closeKeywordScreen();
+    }
   });
 
   form.addEventListener('submit', (event) => {
@@ -25,16 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
       .normalize('NFKC')
       .replace(/\s+/g, '')
       .toLowerCase();
-    const correctAnswers = ['ルーレット', 'るーれっと', 'roulette'];
+
+    const correctAnswers = [
+      'ルーレット',
+      'るーれっと',
+      'roulette'
+    ];
+
     const isCorrect = correctAnswers.includes(answer);
 
-    feedback.className = `puzzle-answer__feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`;
+    feedback.className =
+      `puzzle-answer__feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`;
+
     feedback.textContent = isCorrect
-      ? '正解！それぞれのカードが役の文字列に対応しており、最後の行は『ルーレット』となる。'
-      : '違うようだ。上の3つの行がどんな『役』を作っているか考え、カードと文字を対応させてみよう。';
+      ? '正解。カードの役を手がかりに、最後の言葉を導き出した。'
+      : '違うようだ。上のカード列が表している役を考えてみよう。';
 
     if (isCorrect) {
       keywordScreen.hidden = false;
+      keywordScreen.querySelector('.keyword-screen__word').textContent =
+        '伊勢参り';
       keywordClose.focus();
     }
   });
