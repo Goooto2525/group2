@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (keywordScreen) { keywordScreen.querySelector('.keyword-screen__word').textContent = '山桜'; keywordScreen.hidden = false; if (keywordClose) keywordClose.focus(); }
       return;
     }
-    const hints = ['違うようだ。「神の道を侵さず、古例のままに」という記録断片を読み直そう。', '違うようだ。外宮と内宮では、参道を歩く側が異なるようだ。', '違うようだ。現実の外宮と内宮では、参道を歩く時にどちら側を通るルールになっているだろうか？'];
+    const hints = [ '違うようだ。伊勢神宮における参拝ルールを確認してみよう。'];
     feedback.textContent = hints[Math.min(wrongAttempts - 1, hints.length - 1)];
   });
 });

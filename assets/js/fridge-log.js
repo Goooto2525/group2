@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const answer = input.value.normalize('NFKC').replace(/\s+/g, '').toLowerCase();
     const correct = ['ルーレット', 'るーれっと', 'roulette'].includes(answer);
     feedback.className = `puzzle-answer__feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-    feedback.textContent = correct ? '正解。それぞれのカードが役の文字列に対応しており、最後の行は「ルーレット」となる。' : '違うようだ。上の3つの行がどんな「役」を作っているか考え、カードと文字を対応させてみよう。';
+    feedback.textContent = correct ? '正解。それぞれのカードが役の文字列に対応しており、最後の行は「ルーレット」となる。' : '違うようだ。伊勢ベガスにあるものを使って、カード列に意味を見出そう。';
     if (correct) { keywordScreen.querySelector('.keyword-screen__word').textContent = '伊勢参り'; keywordScreen.hidden = false; keywordClose.focus(); }
   });
 });
