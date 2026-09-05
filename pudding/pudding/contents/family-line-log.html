@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../assets/css/search-modal.css">
   <link rel="stylesheet" href="../assets/css/page-counter.css">
   <link rel="stylesheet" href="../assets/css/search-bar.css">
-  <link rel="stylesheet" href="../assets/css/family-line-log.css?v=3">
+  <link rel="stylesheet" href="../assets/css/family-line-log.css?v=4">
 </head>
 <body>
   <nav class="top-nav">
@@ -24,36 +24,35 @@
       <article class="article pilgrimage-puzzle">
         <header class="article-header puzzle-header">
           <p class="puzzle-header__eyebrow">ARCHIVED PILGRIMAGE RECORD</p>
-          <h1 class="article-title">2つの参道を通り抜け、<br>導き出される言葉を答えよ。</h1>
-          <p class="puzzle-header__lead">二つの宮に残された文字列。神前へ至る者が踏んだ文字だけが、ひとつの御名を示す。</p>
-          <p class="puzzle-header__fragment">記録断片：神の道を侵さず、二宮それぞれ古例のままに。</p>
+          <h1 class="article-title">散逸した参道を通り抜け、<br>導き出される言葉を答えよ。</h1>
+          <p class="puzzle-header__lead">外宮と内宮から五つの断片が発見された。神前へ至る者が踏んだ文字だけが、ひとつの御名を示す。</p>
+          <p class="puzzle-header__fragment">記録断片：神の道を侵さず、二宮それぞれ古例のままに。札序に従い復元せよ。</p>
         </header>
 
         <div class="article-body">
-          <section class="shrine-section shrine-section--geku" aria-labelledby="geku-heading">
-            <header class="shrine-heading">
-              <div><h2 id="geku-heading">外宮 <small>GEKU</small></h2></div>
-              <span class="shrine-heading__seal" aria-hidden="true">外</span>
-            </header>
-            <div class="approach-road" role="img" aria-label="外宮の参道。左側に上からア、マ、テ。右側に上からウ、ゾ、ノが並ぶ">
-              <div class="road-gate" aria-hidden="true"><i></i><span>入口</span><i></i></div>
-              <div class="road-row"><span class="road-letter">ア</span><span class="center-line" aria-hidden="true"></span><span class="road-letter">ウ</span></div>
-              <div class="road-row"><span class="road-letter">マ</span><span class="center-line" aria-hidden="true"></span><span class="road-letter">ゾ</span></div>
-              <div class="road-row"><span class="road-letter">テ</span><span class="center-line" aria-hidden="true"></span><span class="road-letter">ノ</span></div>
-              <div class="road-destination" aria-hidden="true"><span>正宮</span></div>
-            </div>
-          </section>
-
-          <section class="shrine-section shrine-section--naiku" aria-labelledby="naiku-heading">
-            <header class="shrine-heading">
-              <div><h2 id="naiku-heading">内宮 <small>NAIKU</small></h2></div>
-              <span class="shrine-heading__seal" aria-hidden="true">内</span>
-            </header>
-            <div class="approach-road approach-road--short" role="img" aria-label="内宮の参道。左側に上からヨ、ミ。右側に上からラ、スが並ぶ">
-              <div class="road-gate" aria-hidden="true"><i></i><span>入口</span><i></i></div>
-              <div class="road-row"><span class="road-letter">ヨ</span><span class="center-line" aria-hidden="true"></span><span class="road-letter">ラ</span></div>
-              <div class="road-row"><span class="road-letter">ミ</span><span class="center-line" aria-hidden="true"></span><span class="road-letter">ス</span></div>
-              <div class="road-destination" aria-hidden="true"><span>正宮</span></div>
+          <section class="fragment-section" aria-labelledby="fragment-heading">
+            <h2 id="fragment-heading" class="visually-hidden">散逸した五つの参道札</h2>
+            <div class="fragment-grid">
+              <article class="road-fragment road-fragment--naiku" aria-label="札序4、内宮。左側はヨ、右側はラ">
+                <header><span class="fragment-order">札序　肆</span><h3>内宮 <small>NAIKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ヨ</span><i aria-hidden="true"></i><span class="fragment-letter">ラ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序1、外宮。左側はア、右側はウ">
+                <header><span class="fragment-order">札序　壱</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ア</span><i aria-hidden="true"></i><span class="fragment-letter">ウ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--naiku" aria-label="札序5、内宮。左側はミ、右側はス">
+                <header><span class="fragment-order">札序　伍</span><h3>内宮 <small>NAIKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ミ</span><i aria-hidden="true"></i><span class="fragment-letter">ス</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序3、外宮。左側はテ、右側はノ">
+                <header><span class="fragment-order">札序　参</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">テ</span><i aria-hidden="true"></i><span class="fragment-letter">ノ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序2、外宮。左側はマ、右側はゾ">
+                <header><span class="fragment-order">札序　弐</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">マ</span><i aria-hidden="true"></i><span class="fragment-letter">ゾ</span></div><p>入口　↑　正宮</p>
+              </article>
             </div>
           </section>
 
@@ -81,6 +80,6 @@
   <script>window.YACHO_BASE = "../"; window.YACHO_PROVIDER_MODE = "json";</script>
   <script type="module" src="../assets/js/core/index.js"></script>
   <script type="module" src="../assets/js/page-progress.js"></script>
-  <script src="../assets/js/family-line-log.js?v=3"></script>
+  <script src="../assets/js/family-line-log.js?v=4"></script>
 </body>
 </html>
