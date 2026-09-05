@@ -1,62 +1,95 @@
-const STORAGE_KEY = 'gag_case_progress_v1';
+// 閲覧と正解は別々に保存します。古い閲覧記録を正解には変換しません。
+const VISIT_KEY = 'gag_case_progress_v1';
+const CLEAR_KEY = 'ise_puzzle_clears_v1';
+const PUZZLES = ['purchase-record', 'fridge-log', 'family-line-log'];
+const STORIES = ['mother-statement', 'father-statement', 'brother-statement'];
+const FEEDBACK_IDS = ['purchaseFeedback', 'fridgeFeedback', 'pilgrimageFeedback'];
+let sessionClears = {};
+let sessionVisits = {};
 
-const REQUIRED_SLUGS = [
-  'purchase-record',
-  'fridge-log',
-  'family-line-log',
-  'mother-statement',
-  'father-statement',
-  'brother-statement',
-];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const slug = resolveSlug(location.pathname);
-  const progress = readProgress();
-
-  if (REQUIRED_SLUGS.includes(slug)) {
-    progress[slug] = true;
-    writeProgress(progress);
-  }
-
-  const suspectAction = document.getElementById('suspectAction');
-
-  if (!suspectAction) {
-    return;
-  }
-
-  const unlocked = REQUIRED_SLUGS.every(
-    (requiredSlug) => progress[requiredSlug]
-  );
-
-  suspectAction.hidden = !unlocked;
-});
-
-function resolveSlug(pathname) {
-  const file = String(pathname || '')
-    .split('/')
-    .pop()
-    .replace(/\.html?$/i, '')
-    .trim();
-
-  return file || 'index';
-}
-
-function readProgress() {
+function readRecord(key) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch (_error) {
+    const value = JSON.parse(localStorage.getItem(key) || '{}');
+    return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  } catch {
     return {};
   }
 }
 
-function writeProgress(progress) {
+function saveRecord(key, record) {
   try {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(progress)
-    );
-  } catch (_error) {
-    // Ignore storage write failures.
+    localStorage.setItem(key, JSON.stringify(record));
+  } catch {
+    // 保存できない環境でも、このページ内の表示は更新します。
   }
 }
+
+function resolveSlug(pathname) {
+  return String(pathname || '').split('/').pop().replace(/\.html?$/i, '').trim() || 'index';
+}
+
+function refreshProgress() {
+  const clears = { ...readRecord(CLEAR_KEY), ...sessionClears };
+  const visits = { ...readRecord(VISIT_KEY), ...sessionVisits };
+
+  document.querySelectorAll('[data-puzzle-status]').forEach((badge) => {
+    const cleared = clears[badge.dataset.puzzleStatus] === true;
+    badge.textContent = cleared ? '✓ クリア済み' : '未クリア';
+    badge.classList.toggle('is-cleared', cleared);
+  });
+
+  const action = document.getElementById('suspectAction');
+  if (action) {
+    action.hidden = !(
+      PUZZLES.every((slug) => clears[slug] === true) &&
+      STORIES.every((slug) => visits[slug] === true)
+    );
+  }
+}
+
+function initializeProgress() {
+  const slug = resolveSlug(location.pathname);
+
+  if (STORIES.includes(slug)) {
+    sessionVisits[slug] = true;
+    saveRecord(VISIT_KEY, { ...readRecord(VISIT_KEY), ...sessionVisits });
+  }
+
+  const input = document.getElementById('searchInput');
+  const button = document.getElementById('searchBtn');
+  const label = document.querySelector('label[for="searchInput"]');
+  if (input) input.placeholder = '伊勢子に伝える言葉';
+  if (button) button.textContent = '伊勢子に聞く';
+  if (label) label.textContent = '伊勢子に伝える言葉';
+
+  // 既存の謎JSが出す「is-correct」を受け取り、正解を記録します。
+  // 解答そのものやヒント、キーワード画面は既存の謎JSが担当します。
+  if (PUZZLES.includes(slug)) {
+    const feedback = document.getElementById(FEEDBACK_IDS[PUZZLES.indexOf(slug)]);
+    if (feedback) {
+      const recordCorrectAnswer = () => {
+        if (!feedback.classList.contains('is-correct')) return;
+        sessionClears[slug] = true;
+        saveRecord(CLEAR_KEY, { ...readRecord(CLEAR_KEY), ...sessionClears });
+        refreshProgress();
+      };
+      const observer = new MutationObserver(recordCorrectAnswer);
+      observer.observe(feedback, { attributes: true, attributeFilter: ['class'] });
+      recordCorrectAnswer();
+    }
+  }
+
+  refreshProgress();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeProgress, { once: true });
+} else {
+  initializeProgress();
+}
+window.addEventListener('pageshow', refreshProgress);
+window.addEventListener('storage', (event) => {
+  if (event.key === CLEAR_KEY || event.key === VISIT_KEY || event.key === null) {
+    refreshProgress();
+  }
+});
