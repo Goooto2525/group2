@@ -38,38 +38,47 @@
     <main class="content">
       <article class="article pilgrimage-puzzle">
         <header class="article-header puzzle-header">
-          <p class="puzzle-header__eyebrow">
-            ARCHIVED PILGRIMAGE RECORD
-          </p>
-
-          <h1 class="article-title">
-            2つの参道を通り抜け、<br>
-            導き出される言葉を答えよ。
-          </h1>
-
-          <p class="puzzle-header__lead">
-            二つの宮に残された文字列。
-            神前へ至る者が踏んだ文字だけが、
-            ひとつの御名を示す。
-          </p>
-
-          <p class="puzzle-header__fragment">
-            記録断片：
-            神の道を侵さず、二宮それぞれ古例のままに。
-          </p>
+          <p class="puzzle-header__eyebrow">ARCHIVED PILGRIMAGE RECORD</p>
+          <h1 class="article-title">散逸した参道を通り抜け、<br>導き出される言葉を答えよ。</h1>
+          <p class="puzzle-header__lead">外宮と内宮から五つの断片が発見された。神前へ至る者が踏んだ文字だけが、ひとつの御名を示す。</p>
+          <p class="puzzle-header__fragment">記録断片：神の道を侵さず、二宮それぞれ古例のままに。札序に従い復元せよ。</p>
         </header>
 
         <div class="article-body">
-          <section
-            class="shrine-section shrine-section--geku"
-            aria-labelledby="geku-heading"
-          >
-            <header class="shrine-heading">
-              <div>
-                <h2 id="geku-heading">
-                  外宮
-                  <small>GEKU</small>
-                </h2>
+          <section class="fragment-section" aria-labelledby="fragment-heading">
+            <h2 id="fragment-heading" class="visually-hidden">散逸した五つの参道札</h2>
+            <div class="fragment-grid">
+              <article class="road-fragment road-fragment--naiku" aria-label="札序4、内宮。左側はヨ、右側はラ">
+                <header><span class="fragment-order">札序　肆</span><h3>内宮 <small>NAIKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ヨ</span><i aria-hidden="true"></i><span class="fragment-letter">ラ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序1、外宮。左側はア、右側はウ">
+                <header><span class="fragment-order">札序　壱</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ア</span><i aria-hidden="true"></i><span class="fragment-letter">ウ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--naiku" aria-label="札序5、内宮。左側はミ、右側はス">
+                <header><span class="fragment-order">札序　伍</span><h3>内宮 <small>NAIKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">ミ</span><i aria-hidden="true"></i><span class="fragment-letter">ス</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序3、外宮。左側はテ、右側はノ">
+                <header><span class="fragment-order">札序　参</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">テ</span><i aria-hidden="true"></i><span class="fragment-letter">ノ</span></div><p>入口　↑　正宮</p>
+              </article>
+              <article class="road-fragment road-fragment--geku" aria-label="札序2、外宮。左側はマ、右側はゾ">
+                <header><span class="fragment-order">札序　弐</span><h3>外宮 <small>GEKU</small></h3></header>
+                <div class="fragment-road"><span class="fragment-letter">マ</span><i aria-hidden="true"></i><span class="fragment-letter">ゾ</span></div><p>入口　↑　正宮</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="answer-section" aria-labelledby="answer-heading">
+            <p class="answer-section__label">REVEAL THE NAME</p>
+            <h2 id="answer-heading">示された御名は？</h2>
+            <form id="pilgrimagePuzzle" class="puzzle-answer" novalidate>
+              <label class="visually-hidden" for="pilgrimageAnswer">答え</label>
+              <div class="puzzle-answer__controls">
+                <input id="pilgrimageAnswer" name="answer" type="text" autocomplete="off" placeholder="答えを入力" required>
+                <button type="submit">解答する</button>
               </div>
 
               <span

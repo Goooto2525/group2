@@ -5,6 +5,20 @@
 .puzzle-header .article-title { font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-size:clamp(1.55rem,4.2vw,2.65rem); line-height:1.55; letter-spacing:.09em; }
 .puzzle-header__lead { max-width:650px; margin:1rem auto 0; color:var(--text-soft); font-size:.9rem; }
 .puzzle-header__fragment { display:inline-block; margin:1.25rem auto 0; padding:.45rem .9rem; color:#c8b989; border-top:1px solid rgba(213,183,107,.25); border-bottom:1px solid rgba(213,183,107,.25); font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-size:.78rem; letter-spacing:.08em; }
+.fragment-section { width:min(100%,760px); margin-inline:auto; }
+.fragment-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.road-fragment { position:relative; overflow:hidden; border:1px solid rgba(123,135,136,.5); background:#141a1d; box-shadow:0 12px 24px rgba(0,0,0,.22); }
+.road-fragment:last-child { grid-column:1 / -1; width:calc(50% - .5rem); justify-self:center; }
+.road-fragment header { display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.55rem .7rem; border-bottom:1px solid rgba(213,183,107,.28); background:rgba(255,255,255,.025); }
+.road-fragment h3 { margin:0; color:#f1ead4; font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-size:.9rem; letter-spacing:.12em; }
+.road-fragment h3 small { margin-left:.3rem; color:var(--text-faint); font-size:.58rem; letter-spacing:.14em; }
+.fragment-order { color:var(--gold); font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-size:.68rem; letter-spacing:.1em; }
+.fragment-road { display:grid; grid-template-columns:1fr 2px 1fr; align-items:center; min-height:112px; background:linear-gradient(90deg,#202729 0 49.7%,#ecebdd 49.7% 50.3%,#202729 50.3% 100%); }
+.fragment-road>i { align-self:stretch; background:#ecebdd; }
+.fragment-letter { justify-self:center; display:grid; place-items:center; width:52px; height:52px; color:#f4f3e9; border:1px solid rgba(213,183,107,.46); border-radius:50%; background:radial-gradient(circle,#30383a,#171c1e 72%); font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-size:1.55rem; font-weight:700; box-shadow:0 7px 16px rgba(0,0,0,.32); }
+.road-fragment>p { margin:0 !important; padding:.35rem; color:#8e999d; background:#0f1416; font-size:.62rem; text-align:center; letter-spacing:.14em; }
+.road-fragment--naiku { border-color:rgba(117,140,162,.55); }
+.road-fragment--geku { border-color:rgba(141,127,88,.55); }
 .shrine-section { width:min(100%,680px); margin-inline:auto; }
 .shrine-section + .shrine-section { margin-top:2.5rem !important; padding-top:2rem !important; }
 .shrine-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:.8rem; padding-bottom:.65rem; border-bottom:1px solid rgba(213,183,107,.35); }
@@ -32,4 +46,4 @@
 .puzzle-answer__feedback { min-height:3.2em; margin:.9rem 0 0 !important; padding:.65rem .8rem; color:var(--text-soft); line-height:1.65; }
 .puzzle-answer__feedback.is-correct { color:#a9ecc2; border:1px solid rgba(140,224,173,.25); background:rgba(69,143,96,.08); }
 .puzzle-answer__feedback.is-wrong { color:#f1abab; border:1px solid rgba(240,163,163,.25); background:rgba(160,64,64,.08); }
-@media(max-width:560px){.puzzle-header .article-title br{display:none}.puzzle-header__lead{font-size:.82rem}.road-row{min-height:76px}.road-letter{width:48px;height:48px;font-size:1.4rem}.puzzle-answer__controls{flex-direction:column}.puzzle-answer button{width:100%}}
+@media(max-width:560px){.puzzle-header .article-title br{display:none}.puzzle-header__lead{font-size:.82rem}.fragment-grid{grid-template-columns:1fr}.road-fragment:last-child{grid-column:auto;width:100%}.fragment-road{min-height:94px}.road-row{min-height:76px}.road-letter{width:48px;height:48px;font-size:1.4rem}.puzzle-answer__controls{flex-direction:column}.puzzle-answer button{width:100%}}
