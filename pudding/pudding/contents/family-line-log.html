@@ -4,18 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>二つの参道の謎</title>
+
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/search-modal.css">
   <link rel="stylesheet" href="../assets/css/page-counter.css">
   <link rel="stylesheet" href="../assets/css/search-bar.css">
-  <link rel="stylesheet" href="../assets/css/family-line-log.css?v=4">
+  <link rel="stylesheet" href="../assets/css/purchase-record.css">
+  <link rel="stylesheet" href="../assets/css/family-line-log.css?v=3">
 </head>
+
 <body>
   <nav class="top-nav">
     <div class="top-nav__search">
-      <label class="visually-hidden" for="searchInput">検索</label>
-      <input id="searchInput" placeholder="キーワードを入力">
-      <button id="searchBtn" type="button">検索</button>
+      <label class="visually-hidden" for="searchInput">
+        検索
+      </label>
+
+      <input
+        id="searchInput"
+        placeholder="キーワードを入力"
+      >
+
+      <button
+        id="searchBtn"
+        type="button"
+      >
+        検索
+      </button>
     </div>
   </nav>
 
@@ -65,21 +80,254 @@
                 <input id="pilgrimageAnswer" name="answer" type="text" autocomplete="off" placeholder="答えを入力" required>
                 <button type="submit">解答する</button>
               </div>
-              <p id="pilgrimageFeedback" class="puzzle-answer__feedback" aria-live="polite"></p>
+
+              <span
+                class="shrine-heading__seal"
+                aria-hidden="true"
+              >
+                外
+              </span>
+            </header>
+
+            <div
+              class="approach-road"
+              role="img"
+              aria-label="外宮の参道。左側に上からア、マ、テ。右側に上からウ、ゾ、ノが並ぶ"
+            >
+              <div
+                class="road-gate"
+                aria-hidden="true"
+              >
+                <i></i>
+                <span>入口</span>
+                <i></i>
+              </div>
+
+              <div class="road-row">
+                <span class="road-letter">ア</span>
+                <span
+                  class="center-line"
+                  aria-hidden="true"
+                ></span>
+                <span class="road-letter">ウ</span>
+              </div>
+
+              <div class="road-row">
+                <span class="road-letter">マ</span>
+                <span
+                  class="center-line"
+                  aria-hidden="true"
+                ></span>
+                <span class="road-letter">ゾ</span>
+              </div>
+
+              <div class="road-row">
+                <span class="road-letter">テ</span>
+                <span
+                  class="center-line"
+                  aria-hidden="true"
+                ></span>
+                <span class="road-letter">ノ</span>
+              </div>
+
+              <div
+                class="road-destination"
+                aria-hidden="true"
+              >
+                <span>正宮</span>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="shrine-section shrine-section--naiku"
+            aria-labelledby="naiku-heading"
+          >
+            <header class="shrine-heading">
+              <div>
+                <h2 id="naiku-heading">
+                  内宮
+                  <small>NAIKU</small>
+                </h2>
+              </div>
+
+              <span
+                class="shrine-heading__seal"
+                aria-hidden="true"
+              >
+                内
+              </span>
+            </header>
+
+            <div
+              class="approach-road approach-road--short"
+              role="img"
+              aria-label="内宮の参道。左側に上からヨ、ミ。右側に上からラ、スが並ぶ"
+            >
+              <div
+                class="road-gate"
+                aria-hidden="true"
+              >
+                <i></i>
+                <span>入口</span>
+                <i></i>
+              </div>
+
+              <div class="road-row">
+                <span class="road-letter">ヨ</span>
+                <span
+                  class="center-line"
+                  aria-hidden="true"
+                ></span>
+                <span class="road-letter">ラ</span>
+              </div>
+
+              <div class="road-row">
+                <span class="road-letter">ミ</span>
+                <span
+                  class="center-line"
+                  aria-hidden="true"
+                ></span>
+                <span class="road-letter">ス</span>
+              </div>
+
+              <div
+                class="road-destination"
+                aria-hidden="true"
+              >
+                <span>正宮</span>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="answer-section"
+            aria-labelledby="answer-heading"
+          >
+            <p class="answer-section__label">
+              REVEAL THE NAME
+            </p>
+
+            <h2 id="answer-heading">
+              示された御名は？
+            </h2>
+
+            <form
+              id="pilgrimagePuzzle"
+              class="puzzle-answer"
+              novalidate
+            >
+              <label
+                class="visually-hidden"
+                for="pilgrimageAnswer"
+              >
+                答え
+              </label>
+
+              <div class="puzzle-answer__controls">
+                <input
+                  id="pilgrimageAnswer"
+                  name="answer"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="答えを入力"
+                  required
+                >
+
+                <button type="submit">
+                  解答する
+                </button>
+              </div>
+
+              <p
+                id="pilgrimageFeedback"
+                class="puzzle-answer__feedback"
+                aria-live="polite"
+              ></p>
             </form>
           </section>
 
-          <section><p><a href="../index.html">Topページへ戻る</a></p></section>
+          <section>
+            <p>
+              <a href="../index.html">
+                Topページへ戻る
+              </a>
+            </p>
+          </section>
         </div>
       </article>
     </main>
-    <footer class="site-footer"><p>&copy; 2026 消えた限定プリン事件</p><p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 伊勢に眠る「埋蔵金」
+      </p>
+
+      <p>
+        このWebサイトの内容はすべてフィクションであり、
+        実在の人物・団体とは一切関係がありません。
+      </p>
+    </footer>
   </div>
 
-  <div id="page-counter" class="page-counter"><span id="page-current"></span><span class="sep"> / </span><span id="page-total"></span></div>
-  <script>window.YACHO_BASE = "../"; window.YACHO_PROVIDER_MODE = "json";</script>
-  <script type="module" src="../assets/js/core/index.js"></script>
-  <script type="module" src="../assets/js/page-progress.js"></script>
-  <script src="../assets/js/family-line-log.js?v=4"></script>
+  <div
+    id="page-counter"
+    class="page-counter"
+  >
+    <span id="page-current"></span>
+    <span class="sep"> / </span>
+    <span id="page-total"></span>
+  </div>
+
+  <!-- ここに追加しています -->
+  <div
+    id="keywordScreen"
+    class="keyword-screen"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="keywordTitle"
+    hidden
+  >
+    <div class="keyword-screen__panel">
+      <p class="keyword-screen__status">
+        正解
+      </p>
+
+      <h2 id="keywordTitle">
+        キーワード
+      </h2>
+
+      <p class="keyword-screen__word">
+        山桜
+      </p>
+
+      <button
+        id="keywordClose"
+        class="keyword-screen__close"
+        type="button"
+      >
+        謎の画面へ戻る
+      </button>
+    </div>
+  </div>
+
+  <script>
+    window.YACHO_BASE = "../";
+    window.YACHO_PROVIDER_MODE = "json";
+  </script>
+
+  <script
+    type="module"
+    src="../assets/js/core/index.js"
+  ></script>
+
+  <script
+    type="module"
+    src="../assets/js/page-progress.js"
+  ></script>
+
+  <script
+    src="../assets/js/family-line-log.js?v=3"
+  ></script>
 </body>
 </html>
