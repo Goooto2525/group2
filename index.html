@@ -8,12 +8,17 @@
   <link rel="stylesheet" href="assets/css/search-modal.css">
   <link rel="stylesheet" href="assets/css/page-counter.css">
   <link rel="stylesheet" href="assets/css/search-bar.css">
+  <style>
+    .puzzle-status { display: inline-block; padding: .3em .8em; border: 1px solid #89939d; border-radius: 999px; color: #d5dce2; }
+    .puzzle-status.is-cleared { border-color: #89dbb0; color: #89dbb0; }
+    #suspectAction[hidden] { display: none !important; }
+  </style>
 </head>
 <body>
   <nav class="top-nav"><div class="top-nav__search">
-    <label class="visually-hidden" for="searchInput">検索</label>
-    <input id="searchInput" placeholder="キーワードを入力">
-    <button id="searchBtn" type="button">検索</button>
+    <label class="visually-hidden" for="searchInput">伊勢子に伝える言葉</label>
+    <input id="searchInput" placeholder="伊勢子に伝える言葉">
+    <button id="searchBtn" type="button">伊勢子に聞く</button>
   </div></nav>
 
   <div class="site-container"><main class="content"><article class="article">
@@ -62,12 +67,12 @@
 
       <section><h2>夫が残した謎</h2>
         <p>確認されている問題は三つ。決められた順番はない。好きなものから調査して構わない。</p>
-        <p>それぞれの謎を解き、手に入れたキーワードを検索してほしい。</p>
+        <p>それぞれの謎を解き、手に入れたキーワードを画面上の入力欄に入れ、「伊勢子に聞く」を押してください。</p>
       </section>
 
-      <section><h2>伊勢ベガス</h2><p>ゲームや数字を使った問題らしい。</p><p><a href="contents/purchase-record.html">［謎を調べる］</a></p></section>
-      <section><h2>謎2</h2><p>夫が残した別の問題。</p><p><a href="contents/fridge-log.html">［謎を調べる］</a></p></section>
-      <section><h2>謎3</h2><p>これも同じ頃に作られた問題と思われる。</p><p><a href="contents/family-line-log.html">［謎を調べる］</a></p></section>
+      <section><h2>伊勢ベガス</h2><p class="puzzle-status" data-puzzle-status="purchase-record" aria-live="polite">未クリア</p><p>ゲームや数字を使った問題らしい。</p><p><a href="contents/purchase-record.html">［謎を調べる］</a></p></section>
+      <section><h2>謎2</h2><p class="puzzle-status" data-puzzle-status="fridge-log" aria-live="polite">未クリア</p><p>夫が残した別の問題。</p><p><a href="contents/fridge-log.html">［謎を調べる］</a></p></section>
+      <section><h2>謎3</h2><p class="puzzle-status" data-puzzle-status="family-line-log" aria-live="polite">未クリア</p><p>これも同じ頃に作られた問題と思われる。</p><p><a href="contents/family-line-log.html">［謎を調べる］</a></p></section>
 
       <section><h2>最後の問題</h2>
         <p>夫の記録には、短い一文が残されている。</p>
@@ -89,28 +94,3 @@
     </div>
   </article></main>
   <footer class="site-footer"><p>&copy; 2026 伊勢に眠る「埋蔵金」</p><p>このWebサイトの内容はすべてフィクションであり、実在の人物・団体とは一切関係がありません。</p></footer></div>
-
-  <div id="page-counter" class="page-counter"><span id="page-current"></span><span class="sep"> / </span><span id="page-total"></span></div>
-
-  <div class="case-modal hidden" id="suspectModal" aria-hidden="true">
-    <div class="case-modal__overlay" data-close-modal="true"></div>
-    <div class="case-modal__content" role="dialog" aria-modal="true" aria-labelledby="suspectModalTitle">
-      <h2 id="suspectModalTitle">次に行く場所を答えてください</h2>
-      <p>三つのキーワードを手がかりに、次に向かう場所を入力してください。</p>
-      <form class="case-modal__choices" id="suspectForm">
-        <label class="visually-hidden" for="finalAnswer">答え</label>
-        <input id="finalAnswer" name="suspect" type="text" placeholder="答えを入力" autocomplete="off" required>
-        <div class="case-modal__actions">
-          <button type="submit" class="case-action__button">答えを確認する</button>
-          <button type="button" class="case-modal__secondary" data-close-modal="true">閉じる</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>window.YACHO_BASE = "./"; window.YACHO_PROVIDER_MODE = "json";</script>
-  <script type="module" src="./assets/js/core/index.js"></script>
-  <script type="module" src="./assets/js/page-progress.js"></script>
-  <script type="module" src="./assets/js/case-suspect.js"></script>
-</body>
-</html>
