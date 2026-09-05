@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const answer = input.value.normalize('NFKC').trim().toLowerCase();
     const correct = answer === 'poker' || answer === 'ポーカー';
     feedback.className = `puzzle-answer__feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-    feedback.textContent = correct ? '正解。空白のマスをQWERTY配列に見立て、球の番号を文字の順番として読むと「POKER」が導き出される。' : '違うようだ。空白のマスをQWERTY配列に見立て、1番から順に球が置かれたマスの文字を読んでみよう。';
+    feedback.textContent = correct ? '正解。空白のマスをQWERTY配列に見立て、球の番号を文字の順番として読むと「POKER」が導き出される。' : '違うようだ。空白のマスを身近なものに見立てて考えてみよう。数が重要だ。';
     if (correct) { keywordScreen.querySelector('.keyword-screen__word').textContent = '伊勢音頭'; keywordScreen.hidden = false; keywordClose.focus(); }
   });
 });
