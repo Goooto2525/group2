@@ -24,9 +24,10 @@ export function initSearchModal(provider) {
   const performSearch = async () => {
     const { results, hint } = await provider.search(input.value);
 
-    // 結果が1件のみの場合はモーダルをスキップして直接開く
+    // 結果が1件のみの場合はモーダルをスキップして同じタブで遷移する
     if (results && results.length === 1) {
-      window.open(results[0].path, '_blank', 'noopener,noreferrer');
+      recordKeywordClear(input.value);
+      window.location.href = results[0].path;
       return;
     }
 
@@ -43,6 +44,27 @@ export function initSearchModal(provider) {
       performSearch();
     }
   });
+}
+
+function recordKeywordClear(rawInput) {
+  const keyword = String(rawInput || '').normalize('NFKC').trim();
+  const puzzleByKeyword = {
+    '伊勢音頭': 'purchase-record',
+    '伊勢参り': 'fridge-log',
+    '山桜': 'family-line-log',
+  };
+  const puzzle = puzzleByKeyword[keyword];
+  if (!puzzle) return;
+
+  try {
+    const current = JSON.parse(localStorage.getItem('ise_puzzle_clears_v1') || '{}');
+    localStorage.setItem(
+      'ise_puzzle_clears_v1',
+      JSON.stringify({ ...current, [puzzle]: true }),
+    );
+  } catch {
+    // localStorageが使えない環境でも、検索による遷移は継続します。
+  }
 }
 
 function createModal() {
