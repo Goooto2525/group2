@@ -24,9 +24,9 @@ export function initSearchModal(provider) {
   const performSearch = async () => {
     const { results, hint } = await provider.search(input.value);
 
-    // 結果が1件のみの場合はモーダルをスキップして直接開く
+    // 結果が1件のみの場合はモーダルをスキップして同じタブで遷移する
     if (results && results.length === 1) {
-      window.open(results[0].path, '_blank', 'noopener,noreferrer');
+      window.location.href = results[0].path;
       return;
     }
 
