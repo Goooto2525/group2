@@ -12,35 +12,35 @@
             "x": 150,
             "y": -165
         },
-        "node-purchase-record": {
+        "node-puzzle-sequence-ball": {
             "x": 40,
             "y": 40
         },
-        "node-family-line-log": {
+        "node-puzzle-shrine-road": {
             "x": 40,
             "y": 125
         },
-        "node-mother-statement": {
+        "node-record-pilgrimage": {
             "x": 40,
             "y": 210
         },
-        "node-father-statement": {
+        "node-record-ise-ondo": {
             "x": 40,
             "y": 295
         },
-        "node-fridge-log": {
+        "node-puzzle-card-meaning": {
             "x": 40,
             "y": 210
         },
-        "node-brother-statement": {
+        "node-record-mountain-cherry": {
             "x": 40,
             "y": 40
         },
-        "node-my-statement": {
+        "node-record-final-question": {
             "x": 40,
             "y": 125
         },
-        "node-report-final": {
+        "node-treasure-discovery-report": {
             "x": 165,
             "y": 750
         }
@@ -50,10 +50,10 @@
             "id": "group-1779496200489",
             "title": "検索しないと出ないもの",
             "nodeIds": [
-                "node-mother-statement",
-                "node-father-statement",
-                "node-brother-statement",
-                "node-my-statement"
+                "node-record-pilgrimage",
+                "node-record-ise-ondo",
+                "node-record-mountain-cherry",
+                "node-record-final-question"
             ],
             "position": {
                 "x": 105,
@@ -79,9 +79,9 @@
             "id": "group-1779496171085",
             "title": "サイトから見れるところ",
             "nodeIds": [
-                "node-purchase-record",
-                "node-family-line-log",
-                "node-fridge-log"
+                "node-puzzle-sequence-ball",
+                "node-puzzle-shrine-road",
+                "node-puzzle-card-meaning"
             ],
             "position": {
                 "x": 105,
@@ -122,9 +122,9 @@
             "targetHandle": "top"
         },
         {
-            "id": "xy-edge__group-1779496200489bottom-node-report-finaltop",
+            "id": "xy-edge__group-1779496200489bottom-node-treasure-discovery-reporttop",
             "source": "group-1779496200489",
-            "target": "node-report-final",
+            "target": "node-treasure-discovery-report",
             "type": "default",
             "sourceHandle": "bottom",
             "targetHandle": "top"

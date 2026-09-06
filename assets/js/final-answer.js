@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       answer === 'あさまがたけ';
 
     if (correct) {
-      window.location.href = 'contents/report-final.html';
+      window.location.href = 'contents/treasure-discovery-report.html';
       return;
     }
 

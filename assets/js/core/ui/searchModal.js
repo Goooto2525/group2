@@ -49,9 +49,9 @@ export function initSearchModal(provider) {
 function recordKeywordClear(rawInput) {
   const keyword = String(rawInput || '').normalize('NFKC').trim();
   const puzzleByKeyword = {
-    '伊勢音頭': 'purchase-record',
-    '伊勢参り': 'fridge-log',
-    '山桜': 'family-line-log',
+    '伊勢音頭': 'puzzle-sequence-ball',
+    '伊勢参り': 'puzzle-card-meaning',
+    '山桜': 'puzzle-shrine-road',
   };
   const puzzle = puzzleByKeyword[keyword];
   if (!puzzle) return;

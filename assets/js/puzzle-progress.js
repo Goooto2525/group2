@@ -1,8 +1,8 @@
 // 閲覧と正解は別々に保存します。古い閲覧記録を正解には変換しません。
 const VISIT_KEY = 'gag_case_progress_v1';
 const CLEAR_KEY = 'ise_puzzle_clears_v1';
-const PUZZLES = ['purchase-record', 'fridge-log', 'family-line-log'];
-const STORIES = ['mother-statement', 'father-statement', 'brother-statement'];
+const PUZZLES = ['puzzle-sequence-ball', 'puzzle-card-meaning', 'puzzle-shrine-road'];
+const STORIES = ['record-pilgrimage', 'record-ise-ondo', 'record-mountain-cherry'];
 const FEEDBACK_IDS = ['purchaseFeedback', 'fridgeFeedback', 'pilgrimageFeedback'];
 let sessionClears = {};
 let sessionVisits = {};

@@ -259,11 +259,11 @@ body .top-nav__search button:focus-visible {
   display: none;
 }
 
-.report-share {
+.report-sharing {
   margin-top: 1.5rem;
 }
 
-.report-share__link {
+.report-sharing__link {
   display: inline-block;
   text-decoration: none;
 }
