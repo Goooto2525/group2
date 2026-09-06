@@ -21,10 +21,10 @@
             "conditions": []
         },
         {
-            "id": "node-purchase-record",
+            "id": "node-puzzle-sequence-ball",
             "title": "消えた限定プリン事件 対象物取得記録",
-            "slug": "purchase-record",
-            "path": "/contents/purchase-record.html",
+            "slug": "puzzle-sequence-ball",
+            "path": "/contents/puzzle-sequence-ball.html",
             "kind": "page",
             "status": "draft",
             "page_no": 2,
@@ -41,10 +41,10 @@
             "conditions": []
         },
         {
-            "id": "node-family-line-log",
+            "id": "node-puzzle-shrine-road",
             "title": "二つの参道の謎",
-            "slug": "family-line-log",
-            "path": "/contents/family-line-log.html",
+            "slug": "puzzle-shrine-road",
+            "path": "/contents/puzzle-shrine-road.html",
             "kind": "page",
             "status": "draft",
             "page_no": 3,
@@ -61,10 +61,10 @@
             "conditions": []
         },
         {
-            "id": "node-mother-statement",
+            "id": "node-record-pilgrimage",
             "title": "消えた限定プリン事件 母証言記録",
-            "slug": "mother-statement",
-            "path": "/contents/mother-statement.html",
+            "slug": "record-pilgrimage",
+            "path": "/contents/record-pilgrimage.html",
             "kind": "page",
             "status": "draft",
             "page_no": 4,
@@ -83,10 +83,10 @@
             "conditions": []
         },
         {
-            "id": "node-father-statement",
+            "id": "node-record-ise-ondo",
             "title": "消えた限定プリン事件 父証言記録",
-            "slug": "father-statement",
-            "path": "/contents/father-statement.html",
+            "slug": "record-ise-ondo",
+            "path": "/contents/record-ise-ondo.html",
             "kind": "page",
             "status": "draft",
             "page_no": 5,
@@ -105,10 +105,10 @@
             "conditions": []
         },
         {
-            "id": "node-fridge-log",
+            "id": "node-puzzle-card-meaning",
             "title": "消えた限定プリン事件 保管状況確認記録",
-            "slug": "fridge-log",
-            "path": "/contents/fridge-log.html",
+            "slug": "puzzle-card-meaning",
+            "path": "/contents/puzzle-card-meaning.html",
             "kind": "page",
             "status": "draft",
             "page_no": 6,
@@ -125,10 +125,10 @@
             "conditions": []
         },
         {
-            "id": "node-brother-statement",
+            "id": "node-record-mountain-cherry",
             "title": "消えた限定プリン事件 兄証言記録",
-            "slug": "brother-statement",
-            "path": "/contents/brother-statement.html",
+            "slug": "record-mountain-cherry",
+            "path": "/contents/record-mountain-cherry.html",
             "kind": "page",
             "status": "draft",
             "page_no": 7,
@@ -147,10 +147,10 @@
             "conditions": []
         },
         {
-            "id": "node-my-statement",
+            "id": "node-record-final-question",
             "title": "消えた限定プリン事件 私証言記録",
-            "slug": "my-statement",
-            "path": "/contents/my-statement.html",
+            "slug": "record-final-question",
+            "path": "/contents/record-final-question.html",
             "kind": "page",
             "status": "draft",
             "page_no": 8,
@@ -169,10 +169,10 @@
             "conditions": []
         },
         {
-            "id": "node-report-final",
+            "id": "node-treasure-discovery-report",
             "title": "消えた限定プリン事件 最終調査報告書",
-            "slug": "report-final",
-            "path": "/contents/report-final.html",
+            "slug": "treasure-discovery-report",
+            "path": "/contents/treasure-discovery-report.html",
             "kind": "end",
             "status": "draft",
             "page_no": 9,
@@ -203,84 +203,84 @@
             "path": "/index.html"
         },
         {
-            "id": "node-purchase-record",
+            "id": "node-puzzle-sequence-ball",
             "kind": "page",
-            "ref": "p:node-purchase-record",
+            "ref": "p:node-puzzle-sequence-ball",
             "title": "消えた限定プリン事件 対象物取得記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "purchase-record",
-            "path": "/contents/purchase-record.html"
+            "slug": "puzzle-sequence-ball",
+            "path": "/contents/puzzle-sequence-ball.html"
         },
         {
-            "id": "node-family-line-log",
+            "id": "node-puzzle-shrine-road",
             "kind": "page",
-            "ref": "p:node-family-line-log",
+            "ref": "p:node-puzzle-shrine-road",
             "title": "二つの参道の謎",
             "memo": "",
             "nodeType": "page",
-            "slug": "family-line-log",
-            "path": "/contents/family-line-log.html"
+            "slug": "puzzle-shrine-road",
+            "path": "/contents/puzzle-shrine-road.html"
         },
         {
-            "id": "node-mother-statement",
+            "id": "node-record-pilgrimage",
             "kind": "page",
-            "ref": "p:node-mother-statement",
+            "ref": "p:node-record-pilgrimage",
             "title": "消えた限定プリン事件 母証言記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "mother-statement",
-            "path": "/contents/mother-statement.html"
+            "slug": "record-pilgrimage",
+            "path": "/contents/record-pilgrimage.html"
         },
         {
-            "id": "node-father-statement",
+            "id": "node-record-ise-ondo",
             "kind": "page",
-            "ref": "p:node-father-statement",
+            "ref": "p:node-record-ise-ondo",
             "title": "消えた限定プリン事件 父証言記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "father-statement",
-            "path": "/contents/father-statement.html"
+            "slug": "record-ise-ondo",
+            "path": "/contents/record-ise-ondo.html"
         },
         {
-            "id": "node-fridge-log",
+            "id": "node-puzzle-card-meaning",
             "kind": "page",
-            "ref": "p:node-fridge-log",
+            "ref": "p:node-puzzle-card-meaning",
             "title": "消えた限定プリン事件 保管状況確認記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "fridge-log",
-            "path": "/contents/fridge-log.html"
+            "slug": "puzzle-card-meaning",
+            "path": "/contents/puzzle-card-meaning.html"
         },
         {
-            "id": "node-brother-statement",
+            "id": "node-record-mountain-cherry",
             "kind": "page",
-            "ref": "p:node-brother-statement",
+            "ref": "p:node-record-mountain-cherry",
             "title": "消えた限定プリン事件 兄証言記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "brother-statement",
-            "path": "/contents/brother-statement.html"
+            "slug": "record-mountain-cherry",
+            "path": "/contents/record-mountain-cherry.html"
         },
         {
-            "id": "node-my-statement",
+            "id": "node-record-final-question",
             "kind": "page",
-            "ref": "p:node-my-statement",
+            "ref": "p:node-record-final-question",
             "title": "消えた限定プリン事件 私証言記録",
             "memo": "",
             "nodeType": "page",
-            "slug": "my-statement",
-            "path": "/contents/my-statement.html"
+            "slug": "record-final-question",
+            "path": "/contents/record-final-question.html"
         },
         {
-            "id": "node-report-final",
+            "id": "node-treasure-discovery-report",
             "kind": "page",
-            "ref": "p:node-report-final",
+            "ref": "p:node-treasure-discovery-report",
             "title": "消えた限定プリン事件 最終調査報告書",
             "memo": "",
             "nodeType": "end",
-            "slug": "report-final",
-            "path": "/contents/report-final.html"
+            "slug": "treasure-discovery-report",
+            "path": "/contents/treasure-discovery-report.html"
         }
     ],
     "edges": []
