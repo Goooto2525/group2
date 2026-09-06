@@ -5,6 +5,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const keywordScreen = document.getElementById('keywordScreen');
   const keywordClose = document.getElementById('keywordClose');
   if (!form || !input || !feedback || !keywordScreen || !keywordClose) return;
+
+  document.querySelectorAll('.keyboard-row-control').forEach((control) => {
+    const row = control.querySelector('[data-keyboard-row]');
+    const buttons = [...control.querySelectorAll('.row-shift-button')];
+    if (!row || buttons.length !== 2) return;
+
+    let shiftSteps = 0;
+    const updateRowPosition = () => {
+      const key = row.querySelector('.blank-key');
+      if (!key) return;
+      const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+      const halfKey = (key.getBoundingClientRect().width + gap) / 2;
+      row.style.setProperty('--row-shift', `${shiftSteps * halfKey}px`);
+      buttons.forEach((button) => {
+        const direction = Number(button.dataset.direction);
+        button.disabled = (direction < 0 && shiftSteps <= -2) || (direction > 0 && shiftSteps >= 2);
+      });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        shiftSteps = Math.max(-2, Math.min(2, shiftSteps + Number(button.dataset.direction)));
+        updateRowPosition();
+      });
+    });
+
+    window.addEventListener('resize', updateRowPosition);
+    updateRowPosition();
+  });
+
   const closeKeywordScreen = () => { keywordScreen.hidden = true; input.focus(); };
   keywordClose.addEventListener('click', closeKeywordScreen);
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !keywordScreen.hidden) closeKeywordScreen(); });
