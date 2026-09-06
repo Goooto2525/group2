@@ -103,9 +103,10 @@
 .keyword-screen__word {
   margin: .5rem 0 1.8rem;
   color: #fff;
-  font-size: clamp(4rem, 18vw, 8rem);
+  font-size: clamp(2.5rem, 12vw, 5rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1;
+  white-space: nowrap;
   text-shadow: 0 0 30px rgba(255, 220, 140, .3);
 }
 
